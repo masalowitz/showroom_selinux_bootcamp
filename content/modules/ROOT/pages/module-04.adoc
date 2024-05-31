@@ -1,1 +1,11 @@
-= TODO
+= Policy Creation
+
+== Elements
+
+== Access types {read, open, etc}
+
+== Policy Constraints (actual coded constraints)
+
+== Bypassing constraints
+
+== Testing 
