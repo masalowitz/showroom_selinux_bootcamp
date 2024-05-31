@@ -1,5 +1,5 @@
 name: modules
-title: {{lab_name}}
+title: {lab_name}
 version: master
 nav:
   - modules/ROOT/nav.adoc
