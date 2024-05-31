@@ -1,6 +1,4 @@
-= SELinux BootCamp
-
-== Overview
+= SELinux BootCamp Overview
 
 In this lab, you will be...
 

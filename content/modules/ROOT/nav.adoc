@@ -1,4 +1,4 @@
-* xref:module-01.adoc[1. SELinux BootCamp]
+* xref:module-01.adoc[1. SELinux BootCamp Overview]
 ** xref:module-01.adoc#objectives[Objectives]
 ** xref:module-01.adoc#target_audience[Target Audience]
 
