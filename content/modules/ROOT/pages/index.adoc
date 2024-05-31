@@ -3,3 +3,5 @@
 This course is designed to teach SELinux from basic techniques through advanced applications including MLS, container technologies, and custom policy.
 
 This course is a work in progress.
+
+Status: DRAFT
