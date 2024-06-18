@@ -1,12 +1,27 @@
 = Overview
 
-In this lab, you will be...
+If you have been working with Linux for long, there is little doubt that you have heard of... and probably tangled with... SELinux. If you have ever hit an AVC trying to perform an operation you think should be allowed and dug under the hood to find out why and how to fix it, then this course is for you.
+
+Welcome to the SELinux Bootcamp.
+
+In this series of modules and lab exercises, you will be guided through progressively more difficult scenarios that highlight the key principles of maintaining a hardened SELinux environment. It is our hope that this course can help overcome the seemingly vertical learning curve and demonstrate that SELinux is a valuable tool to be mastered and the core of a safe, secure, and well-planned Linux installation.  
 
 [#objectives]
 == Objectives
-In this lab, you are going to.. 
+In this course, we will cover:
+
+- Policy Elements: The fundamental bits and pieces that make SELinux work
+- Policy Management: Making changes to existing policy
+- Policy Creation: Spinning new policies for custom applications and new roles
+- Policy Analysis: Inspecting your custom policy for exploitable breakout to root and other roles
+- Openshift Considerations: Working with SELinux in Containers
+- MLS: Multi-Level Security structure and considerations
+- Real-World Scenarios: Abstracted examples and solutions from the field
+- References: A useful compendium of links for further reading and research
+
+At the end of the course you should be armed with not only basic knowledge to operate in an enforcing SElinux environment, but be able to maintain and guide a systems infrastructure with repeatable and safe practices for policy management.
 
 [#target_audience]
 == Target Audience
 
-If you are....
+This course is best suited to experienced Linux systems administrators with an active need to work with SELinux and can put these principles into practice. 
