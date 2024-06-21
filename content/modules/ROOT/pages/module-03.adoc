@@ -1,7 +1,9 @@
 = Policy Management
 
+[#selinux_modules]
 == SELinux Modules
 
+[#policy_types]
 == Policy types 
 
 === Targeted 
@@ -12,10 +14,13 @@
 
 === non-RH variations
 
+[#automation]
 == Automation
 
+[#default_roles]
 == Default roles
 
-== Inspecting policy
+[#policy_inspection]
+== Policy Inspection
 
 

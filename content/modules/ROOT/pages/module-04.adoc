@@ -1,11 +1,16 @@
 = Policy Creation
 
-== Elements
+[#policy_elements]
+== Policy Elements
 
-== Access types {read, open, etc}
+[#access_types]
+== Access Types {read, open, etc}
 
-== Policy Constraints (actual coded constraints)
+[#policy_constraints]
+== Policy Constraints (Coded Constraints)
 
-== Bypassing constraints
+[#bypassing_constraints]
+== Bypassing Constraints
 
-== Testing 
+[#policy_testing]
+== Policy Testing 

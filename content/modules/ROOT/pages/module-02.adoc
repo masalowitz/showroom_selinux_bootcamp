@@ -1,18 +1,26 @@
 = Policy Elements
 
+[#types]
 == Types
 
+[#file_contexts]
 == File Contexts
 
+[#roles]
 == Roles
 
+[#domains]
 == Domains
 
+[#transitions]
 == Transitions
 
+[#category]
 == Category
 
+[#sensitivity_levels]
 == Sensitivity Levels
 
+[#booleans]
 == Booleans
 
