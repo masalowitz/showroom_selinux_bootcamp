@@ -1,5 +1,16 @@
 = MLS 
 
-== Planning 
+[#mls_planning]
+== MLS Planning 
 
-== Implementation
+[#mls_implementation]
+== MLS Implementation
+
+[#polyinstantiation]
+== Polyinstantiation
+
+[#mls_operations]
+== MLS Operations
+
+[#mls_testing]
+== MLS Testing

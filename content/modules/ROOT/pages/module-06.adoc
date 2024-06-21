@@ -1,6 +1,8 @@
 = OpenShift Considerations
 
-== Containers
+[#container_selinux]
+== Container SELinux
 
-== Platform
+[#platform_selinux]
+== Platform SELinux
 

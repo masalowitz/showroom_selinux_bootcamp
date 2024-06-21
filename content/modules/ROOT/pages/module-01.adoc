@@ -24,4 +24,5 @@ At the end of the course you should be armed with not only basic knowledge to op
 [#target_audience]
 == Target Audience
 
-This course is best suited to experienced Linux systems administrators with an active need to work with SELinux and can put these principles into practice. 
+This course is best suited to experienced Linux systems administrators with an active need to work with SELinux and can put these principles into practice.
+

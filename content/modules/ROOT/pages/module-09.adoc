@@ -1,1 +1,19 @@
 = References
+
+[#red_hat_documentation]
+== Red Hat Documentation
+
+[#red_hat_blogs]
+== Red Hat Blogs
+
+[#historical_references]
+== Historical References
+
+[#reference_policy]
+== Reference Policy
+
+[#kernel_code]
+== Kernel Code
+
+[#other_references]
+== Other References
