@@ -9,6 +9,13 @@
 [#polyinstantiation]
 == Polyinstantiation
 
+[#labeling_networks]
+== Labeling Networks
+
+=== CIPSO (IPv4)
+
+=== CALIPSO (IPv6)
+
 [#mls_operations]
 == MLS Operations
 
