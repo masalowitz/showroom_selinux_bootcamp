@@ -29,14 +29,22 @@ This course is best suited to experienced Linux systems administrators with an a
 [#introduction_to_selinux]
 == Introduction to SELinux
 
-=== Background 
+=== Background
+
+At the time of this writing, almost 24 years have passed since the first publicly available kernel patch release for SELinux.
 
 === Security Model
+
+////
+
+MS: Not sure this is relevant. I Would like to include the high points of its history but not at the expense of trying to distill 25 years of changelog into a few paragraphs.
 
 === NSA & FLASK Implementation
 
 === LSM Introduction
 
-=== SELinux in RHEL
+=== SELinux introduction in RHEL 4
 
 === Container Technologies
+
+////
