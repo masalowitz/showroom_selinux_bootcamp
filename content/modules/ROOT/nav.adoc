@@ -1,6 +1,7 @@
 * xref:module-01.adoc[1. Overview]
 ** xref:module-01.adoc#objectives[Objectives]
 ** xref:module-01.adoc#target_audience[Target Audience]
+** xref:module-01.adoc#introduction_to_selinux[Introduction to SELinux]
 
 * xref:module-02.adoc[2. Policy Elements]
 ** xref:module-02.adoc#types[Types]
@@ -39,6 +40,7 @@
 ** xref:module-07.adoc#mls_planning[MLS Planning]
 ** xref:module-07.adoc#mls_implementation[MLS Implementation]
 ** xref:module-07.adoc#polyinstantiation[Polyinstantiation]
+** xref:module-07.adoc#labeling_networks[Labeling Networks]
 ** xref:module-07.adoc#mls_operations[MLS Operations]
 ** xref:module-07.adoc#mls_testing[MLS Testing]
 

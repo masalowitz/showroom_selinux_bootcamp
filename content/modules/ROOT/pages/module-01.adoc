@@ -26,3 +26,5 @@ At the end of the course you should be armed with not only basic knowledge to op
 
 This course is best suited to experienced Linux systems administrators with an active need to work with SELinux and can put these principles into practice.
 
+[#introduction_to_selinux]
+== [Introduction to SELinux]
