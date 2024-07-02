@@ -31,13 +31,23 @@ This course is best suited to experienced Linux systems administrators with an a
 
 === Background
 
-At the time of this writing, almost 24 years have passed since the first publicly available kernel patch release for SELinux.
+At the time of this writing, almost 24 years have passed since the first publicly available kernel patch release for SELinux. From it's inception by the National Security Agency (NSA) as a compilable kernel module, through the incorporation of the Linux Security Module (LSM) kernel abstraction layer, through the advent of container technologies, the goal of the SELinux project has been at once incredibly simple yet incredibly complex:
+
+. Prevent unauthorized access to system resources, code, and data through the deployment of a system policy by which:
+.. Individual system resources are identified by labels
+.. Individual users are managed by abstracted roles with predefined capabilities
+.. Access between users and/or resources are defined by explicit transitions
+.. Deny by default
+.. Changes in security levels of data can only be performed by clearly defined roles
 
 === Security Model
 
+The basic security model of SELinux...
+
+
 ////
 
-MS: Not sure this is relevant. I Would like to include the high points of its history but not at the expense of trying to distill 25 years of changelog into a few paragraphs.
+MS: Not sure the following historical stuff is relevant. I Would like to include the high points of its history but not at the expense of trying to distill 25 years of changelog into a few paragraphs. If someone wants to take this on great. If I think of a reasonable summary I will.
 
 === NSA & FLASK Implementation
 
