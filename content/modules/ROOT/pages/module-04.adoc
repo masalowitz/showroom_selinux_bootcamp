@@ -8,7 +8,7 @@
 
 
 
-include::assets/files/access_vectors[]
+include::../assets/files/access_vectors[]
 
 
 
