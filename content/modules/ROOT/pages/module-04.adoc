@@ -6,7 +6,7 @@
 [#access_vectors]
 == Access Vectors {read, open, etc}
 
-[source,m4]
+
 ----
 include::modules/ROOT/assets/files/access_vectors[]
 ----
