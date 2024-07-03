@@ -8,7 +8,7 @@
 
 [source,m4]
 ----
-include::assets/files/access_vectors[]
+include::modules/ROOT/assets/files/access_vectors[]
 ----
 
 
