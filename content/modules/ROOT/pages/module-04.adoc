@@ -6,10 +6,6 @@
 [#access_vectors]
 == Access Vectors {read, open, etc}
 
-[source]
-----
-include::files/access_vectors[]
-----
 
 
 [#policy_constraints]
