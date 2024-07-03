@@ -22,7 +22,7 @@
 
 * xref:module-04.adoc[4. Policy Creation]
 ** xref:module-04.adoc#policy_elements[Policy Elements]
-** xref:module-04.adoc#access_types[Access Types]
+** xref:module-04.adoc#access_vectors[Access Vectors]
 ** xref:module-04.adoc#policy_constraints[Policy Constraints]
 ** xref:module-04.adoc#bypassing_constraints[Bypassing Constraints]
 ** xref:module-04.adoc#policy_testing[Policy Testing]

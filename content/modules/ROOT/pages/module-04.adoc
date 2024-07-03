@@ -3,8 +3,15 @@
 [#policy_elements]
 == Policy Elements
 
-[#access_types]
-== Access Types {read, open, etc}
+[#access_vectors]
+== Access Vectors {read, open, etc}
+
+[source,m4]
+----
+include::assets/files/access_vectors[]
+----
+
+
 
 [#policy_constraints]
 == Policy Constraints (Coded Constraints)
