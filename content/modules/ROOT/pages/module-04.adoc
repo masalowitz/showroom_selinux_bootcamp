@@ -7,9 +7,8 @@
 == Access Vectors {read, open, etc}
 
 
-----
+
 include::modules/ROOT/assets/files/access_vectors[]
-----
 
 
 
