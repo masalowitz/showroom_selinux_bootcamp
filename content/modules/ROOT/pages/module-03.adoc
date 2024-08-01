@@ -106,6 +106,7 @@ system_r
 Basic permissions are preconfigured for these roles. From the published documentation, we see the following broad categories of capabilities allowed and prohibited for each role. By default, execute permissions are granted in the home directory and /tmp for all roles.
 
 [cols="1,1,1,1,1"]
+|===
 |Role|Type|Graphical Login|su/sudo|Networking
 
 |guest_r
@@ -151,6 +152,8 @@ secadm_t
 |yes
 |yes
 
+|===
+
 The roles auditadm_r and secadm_r are special roles obtained through a transition from a root login or member of staff_u and as such inherit the graphical session if in use. Furthermore, access to the sysadm_u SELinux user via SSH is blocked by default unless explicitly granted ssh_sysadm_login=1.
 
 Additional roles are available and pre-loaded in modules for further separation of duties. Modules for dbadm, webadm, and logadm are loaded by default into the base MLS policy.
@@ -173,7 +176,6 @@ xguest_u        user       s0         s0                             xguest_r
 ---
 
 Red Hat Reference: link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/using_selinux/index#ref_selinux-roles-in-mls_using-multi-level-security-mls[ref_selinux-roles-in-mls_using-multi-level-security-mls]
-
 
 
 [#policy_inspection]
