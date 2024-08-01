@@ -26,7 +26,7 @@ Comparing the available roles in MLS policy vs the available roles in Targeted p
 
 [source,shell]
 ---
-[root@MLS ~]# semanage user -l
+root@MLS ~# semanage user -l
 
                 Labeling   MLS/       MLS/                          
 SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
@@ -39,7 +39,7 @@ system_u        user       s0         s0-s15:c0.c1023                system_r
 user_u          user       s0         s0                             user_r
 xguest_u        user       s0         s0                             xguest_r
 
-[root@TARGETED ~]# semanage user -l
+root@TARGETED ~# semanage user -l
 
                 Labeling   MLS/       MLS/                          
 SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
@@ -149,8 +149,8 @@ Additional roles are available and pre-loaded in modules for further separation 
 
 [source,shell]
 ---
-[root@MLS ~]# semanage user --add -L s0 -R dbadm_r -r s0-s15:c0.c1023 dbadm_u
-[root@MLS ~]# semanage user -l
+# semanage user --add -L s0 -R dbadm_r -r s0-s15:c0.c1023 dbadm_u
+# semanage user -l
                 Labeling   MLS/       MLS/                          
 SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
 
