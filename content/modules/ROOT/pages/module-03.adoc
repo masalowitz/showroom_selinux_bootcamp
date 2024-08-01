@@ -180,4 +180,7 @@ Red Hat Reference: link:https://docs.redhat.com/en/documentation/red_hat_enterpr
 [#policy_inspection]
 == Policy Inspection
 
+The goal of policy inspection is to ensure that...
+
+Various tools exist...
 
