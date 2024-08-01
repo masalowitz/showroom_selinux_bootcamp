@@ -22,9 +22,42 @@
 
 SELinux comes with a set of default roles with a pre-defined set of privileges built into their policy, enforcing separation of duties through restricted permissions enabled for each role. 
 
+Comparing the available roles in MLS policy vs the available roles in Targeted policy, we see an expansion of the available administrative roles and the removal of the unconfined role.
+
+[source,shell]
+---
+[root@MLS ~]# semanage user -l
+
+                Labeling   MLS/       MLS/                          
+SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
+
+guest_u         user       s0         s0                             guest_r
+root            user       s0         s0-s15:c0.c1023                auditadm_r secadm_r staff_r sysadm_r system_r
+staff_u         user       s0         s0-s15:c0.c1023                auditadm_r secadm_r staff_r sysadm_r
+sysadm_u        user       s0         s0-s15:c0.c1023                sysadm_r
+system_u        user       s0         s0-s15:c0.c1023                system_r
+user_u          user       s0         s0                             user_r
+xguest_u        user       s0         s0                             xguest_r
+
+[root@TARGETED ~]# semanage user -l
+
+                Labeling   MLS/       MLS/                          
+SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
+
+guest_u         user       s0         s0                             guest_r
+root            user       s0         s0-s0:c0.c1023                 staff_r sysadm_r system_r unconfined_r
+staff_u         user       s0         s0-s0:c0.c1023                 staff_r sysadm_r system_r unconfined_r
+sysadm_u        user       s0         s0-s0:c0.c1023                 sysadm_r
+system_u        user       s0         s0-s0:c0.c1023                 system_r unconfined_r
+unconfined_u    user       s0         s0-s0:c0.c1023                 system_r unconfined_r
+user_u          user       s0         s0                             user_r
+xguest_u        user       s0         s0                             xguest_r
+---
+
+
 [cols="1,1,1"]
 |===
-|User|Default Role|Available Roles
+|User|Default Role|Available Role Transitions
 
 |user_u
 |user_r
@@ -52,7 +85,87 @@ sysadm_r
 
 system_r
 
+|guest_u
+|guest_r
+|none
+
+|xguest_u
+|xguest_r
+|none
+
 |===
+
+Basic permissions are preconfigured for these roles. From the published documentation, we see the following broad categories of capabilities allowed and prohibited for each role. By default, execute permissions are granted in the home directory and /tmp for all roles.
+
+[cols="1,1,1,1,1"]
+|Role|Type|Graphical Login|su/sudo|Networking
+
+|guest_r
+|guest_t
+|no
+|no
+|no
+
+|xguest_r
+|xguest_t
+|yes
+|no
+|web browsers only
+
+|user_r
+|user_t
+|yes
+|no
+|yes
+
+|staff_r
+|staff_t
+|yes
+|sudo only
+|yes
+|yes
+
+|auditadm_r
+|auditadm_t
+|n/a
+|yes
+|yes
+
+secadm_r
+secadm_t
+|n/a
+|yes
+|yes
+
+|sysadm_r
+|sysadm_t
+|If xdm_sysadm_login=1
+|yes
+|yes
+
+The roles auditadm_r and secadm_r are special roles obtained through a transition from a root login or member of staff_u and as such inherit the graphical session if in use. Furthermore, access to the sysadm_u SELinux user via SSH is blocked by default unless explicitly granted ssh_sysadm_login=1.
+
+Additional roles are available and pre-loaded in modules for further separation of duties. Modules for dbadm, webadm, and logadm are loaded by default into the base MLS policy.
+
+[source,shell]
+---
+[root@MLS ~]# semanage user --add -L s0 -R dbadm_r -r s0-s15:c0.c1023 dbadm_u
+[root@MLS ~]# semanage user -l
+                Labeling   MLS/       MLS/                          
+SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
+
+dbadm_u         user       s0         s0-s15:c0.c1023                dbadm_r
+guest_u         user       s0         s0                             guest_r
+root            user       s0         s0-s15:c0.c1023                auditadm_r secadm_r staff_r sysadm_r system_r
+staff_u         user       s0         s0-s15:c0.c1023                auditadm_r secadm_r staff_r sysadm_r
+sysadm_u        user       s0         s0-s15:c0.c1023                sysadm_r
+system_u        user       s0         s0-s15:c0.c1023                system_r
+user_u          user       s0         s0                             user_r
+xguest_u        user       s0         s0                             xguest_r
+---
+
+Red Hat Reference: link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/using_selinux/index#ref_selinux-roles-in-mls_using-multi-level-security-mls[ref_selinux-roles-in-mls_using-multi-level-security-mls]
+
 
 
 [#policy_inspection]
