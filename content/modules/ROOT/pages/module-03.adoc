@@ -22,18 +22,31 @@
 
 SELinux comes with a set of default roles with a pre-defined set of privileges built into their policy, enforcing separation of duties through restricted permissions enabled for each role. 
 
-[cols="1,1"]
+[cols="1,1,1"]
 |===
-|User|Default Role|Available Roles 
+|User|Default Role|Available Roles
 
-|Cell in column 1, row 2
-|Cell in column 2, row 2
+|user_u
+|user_r
+|none
 
-|Cell in column 1, row 3
-|Cell in column 2, row 3
+|staff_u
+|staff_r
+|auditadm_r
+secadm_r 
+sysadm_r
 
-|Cell in column 1, row 4
-|Cell in column 2, row 4
+|sysadm_u
+|sysadm_r
+|none
+
+|root
+|staff_r
+|auditadm_r
+secadm_r 
+sysadm_r
+system_r
+
 |===
 
 
