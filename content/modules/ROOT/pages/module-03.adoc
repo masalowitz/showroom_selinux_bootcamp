@@ -61,6 +61,8 @@ user_u          user       s0         s0                             user_r
 xguest_u        user       s0         s0                             xguest_r
 ----
 
+Here is a simplified view of the available default roles and their transitions:
+
 [cols="1,1,1"]
 |===
 |User|Default Role|Available Role Transitions
@@ -101,7 +103,7 @@ system_r
 
 |===
 
-Basic permissions are preconfigured for these roles. From the published documentation, we see the following broad categories of capabilities allowed and prohibited for each role. By default, execute permissions are granted in the home directory and /tmp for all roles.
+Basic permissions are pre-configured for these roles. From the published documentation, we see the following broad categories of capabilities allowed and prohibited for each role. By default, execute permissions are granted in the home directory and /tmp for all roles.
 
 [cols="1,1,1,1,1"]
 |===
@@ -129,7 +131,6 @@ Basic permissions are preconfigured for these roles. From the published document
 |staff_t
 |yes
 |sudo only
-|yes
 |yes
 
 |auditadm_r
