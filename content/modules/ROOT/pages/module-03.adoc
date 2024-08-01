@@ -27,7 +27,7 @@ Comparing the available roles in MLS policy vs the available roles in Targeted p
 MLS: 
 
 [source,shell]
----
+----
 # semanage user -l
 
                 Labeling   MLS/       MLS/                          
@@ -40,12 +40,12 @@ sysadm_u        user       s0         s0-s15:c0.c1023                sysadm_r
 system_u        user       s0         s0-s15:c0.c1023                system_r
 user_u          user       s0         s0                             user_r
 xguest_u        user       s0         s0                             xguest_r
---- 
+----
 
 Targeted: 
 
 [source,shell]
----
+----
 # semanage user -l
 
                 Labeling   MLS/       MLS/                          
@@ -59,9 +59,7 @@ system_u        user       s0         s0-s0:c0.c1023                 system_r un
 unconfined_u    user       s0         s0-s0:c0.c1023                 system_r unconfined_r
 user_u          user       s0         s0                             user_r
 xguest_u        user       s0         s0                             xguest_r
-
----
-
+----
 
 [cols="1,1,1"]
 |===
@@ -159,7 +157,7 @@ The roles auditadm_r and secadm_r are special roles obtained through a transitio
 Additional roles are available and pre-loaded in modules for further separation of duties. Modules for dbadm, webadm, and logadm are loaded by default into the base MLS policy.
 
 [source,shell]
----
+----
 # semanage user --add -L s0 -R dbadm_r -r s0-s15:c0.c1023 dbadm_u
 # semanage user -l
                 Labeling   MLS/       MLS/                          
@@ -173,7 +171,7 @@ sysadm_u        user       s0         s0-s15:c0.c1023                sysadm_r
 system_u        user       s0         s0-s15:c0.c1023                system_r
 user_u          user       s0         s0                             user_r
 xguest_u        user       s0         s0                             xguest_r
----
+----
 
 Red Hat Reference: link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/using_selinux/index#ref_selinux-roles-in-mls_using-multi-level-security-mls[ref_selinux-roles-in-mls_using-multi-level-security-mls]
 
