@@ -155,7 +155,29 @@ Basic permissions are pre-configured for these roles. From the published documen
 
 The roles auditadm_r and secadm_r are special roles obtained through a transition from a root login or member of staff_u and as such inherit the graphical session if in use. Furthermore, access to the sysadm_u SELinux user via SSH is blocked by default unless explicitly granted ssh_sysadm_login=1.
 
-Additional roles are available and pre-loaded in modules for further separation of duties. Modules for dbadm, webadm, and logadm are loaded by default into the base MLS policy.
+By default, the role sysadm_r has the rights to operate as role secadm_r. In many MLS implementations this is prohibited and separation of duties is strictly enforced. Separating secadm_r from sysadm_r is a relatively simple process, but at least one user must be created prior to separation or you will lose the ability to modify policy.
+
+The following procedure is taken from the Red Hat documentation section link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/using_selinux/index#proc_separating-system-administration-from-security-administration-in-mls_using-multi-level-security-mls[separating-system-administration-from-security-administration-in-mls_using-multi-level-security-mls]
+
+# Prerequisites
+
+. The SELinux policy is set to mls.
+. The SELinux mode is set to enforcing.
+. The policycoreutils-python-utils package is installed.
+. A Linux user which will be assigned to the secadm_r role:
+.. The user is assigned to the staff_u SELinux user
+.. A password for this user has been defined.
+
+Ensure that you can log into the account for this user. 
+
+# Procedure
+
+#TODO#
+
+
+Additional roles are available and pre-loaded in modules for further separation of duties. Modules for dbadm, webadm, and logadm are loaded by default into the base MLS policy. 
+
+If desired, it is possible to create an SELinux user for these supplemental roles as follows:
 
 [source,shell]
 ----
@@ -173,6 +195,10 @@ system_u        user       s0         s0-s15:c0.c1023                system_r
 user_u          user       s0         s0                             user_r
 xguest_u        user       s0         s0                             xguest_r
 ----
+
+Best practice, however, to to allow transition to these individual roles via sudo from the staff_r role similar to the example for secadm_r above. 
+
+
 
 Red Hat Reference: link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/using_selinux/index#ref_selinux-roles-in-mls_using-multi-level-security-mls[ref_selinux-roles-in-mls_using-multi-level-security-mls]
 
