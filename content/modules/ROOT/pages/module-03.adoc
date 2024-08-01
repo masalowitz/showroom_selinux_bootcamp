@@ -33,7 +33,9 @@ SELinux comes with a set of default roles with a pre-defined set of privileges b
 |staff_u
 |staff_r
 |auditadm_r
+
 secadm_r 
+
 sysadm_r
 
 |sysadm_u
@@ -43,8 +45,11 @@ sysadm_r
 |root
 |staff_r
 |auditadm_r
+
 secadm_r 
+
 sysadm_r
+
 system_r
 
 |===
