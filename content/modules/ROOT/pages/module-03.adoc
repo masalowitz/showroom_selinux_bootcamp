@@ -24,9 +24,11 @@ SELinux comes with a set of default roles with a pre-defined set of privileges b
 
 Comparing the available roles in MLS policy vs the available roles in Targeted policy, we see an expansion of the available administrative roles and the removal of the unconfined role.
 
+MLS: 
+
 [source,shell]
 ---
-[root@MLS ~]# semanage user -l
+# semanage user -l
 
                 Labeling   MLS/       MLS/                          
 SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
@@ -38,8 +40,13 @@ sysadm_u        user       s0         s0-s15:c0.c1023                sysadm_r
 system_u        user       s0         s0-s15:c0.c1023                system_r
 user_u          user       s0         s0                             user_r
 xguest_u        user       s0         s0                             xguest_r
+--- 
 
-[root@TARGETED ~]# semanage user -l
+Targeted: 
+
+[source,shell]
+---
+# semanage user -l
 
                 Labeling   MLS/       MLS/                          
 SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
@@ -52,6 +59,7 @@ system_u        user       s0         s0-s0:c0.c1023                 system_r un
 unconfined_u    user       s0         s0-s0:c0.c1023                 system_r unconfined_r
 user_u          user       s0         s0                             user_r
 xguest_u        user       s0         s0                             xguest_r
+
 ---
 
 
@@ -149,8 +157,8 @@ Additional roles are available and pre-loaded in modules for further separation 
 
 [source,shell]
 ---
-[root@MLS ~]# semanage user --add -L s0 -R dbadm_r -r s0-s15:c0.c1023 dbadm_u
-[root@MLS ~]# semanage user -l
+# semanage user --add -L s0 -R dbadm_r -r s0-s15:c0.c1023 dbadm_u
+# semanage user -l
                 Labeling   MLS/       MLS/                          
 SELinux User    Prefix     MCS Level  MCS Range                      SELinux Roles
 
